@@ -1,5 +1,5 @@
-# Real-ESRGAN-TG-bot
-A Telegram bot that upscale photo with Real-ESRGAN-ncnn-vulkan
+# Real-ESRGAN-TG-bot-win
+A Telegram bot that upscale photo with Real-ESRGAN-ncnn-vulkan on windows
 
 ## 🔧 Dependencies and Installation
 
@@ -9,16 +9,15 @@ A Telegram bot that upscale photo with Real-ESRGAN-ncnn-vulkan
 
 1. Clone repo
 
-    ```bash
+    ```pwsh
     git clone https://github.com/keep1earning/Real-ESRGAN-TG-bot
     cd Real-ESRGAN-TG-bot
     ```
 
 1. Install dependent packages
 
-    ```bash
-    chmod +x ./install_realesrgan-ncnn-vulkan.sh
-    bash ./install_realesrgan-ncnn-vulkan.sh
+    ```pwsh
+    pwsh ./install_realesrgan-ncnn-vulkan.ps1
     ```
 
 2.  Input api_id & api_ash & bot_token in tg_bot_config.py
