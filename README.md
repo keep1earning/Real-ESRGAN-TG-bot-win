@@ -25,5 +25,5 @@ A Telegram bot that upscale photo with Real-ESRGAN-ncnn-vulkan on windows
 3.  Run the main program
       
       ```bash
-      python3 ./main.py
+      python ./main.py
       ```
