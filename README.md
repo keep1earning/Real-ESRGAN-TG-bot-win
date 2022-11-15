@@ -10,8 +10,8 @@ A Telegram bot that upscale photo with Real-ESRGAN-ncnn-vulkan on windows
 1. Clone repo
 
     ```pwsh
-    git clone https://github.com/keep1earning/Real-ESRGAN-TG-bot
-    cd Real-ESRGAN-TG-bot
+    git clone https://github.com/keep1earning/Real-ESRGAN-TG-bot-win
+    cd Real-ESRGAN-TG-bot-win
     ```
 
 1. Install dependent packages
