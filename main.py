@@ -4,7 +4,7 @@ import json
 from retrying import retry
 from telethon import TelegramClient, events
 from tg_bot_config import api_hash, api_id, bot_token
-model_list = ["realesr-animevideov3","realesrgan-x4plus","realesrgan-x4plus-anime","realesrnet-x4plus"]
+model_list = ["realesr-animevideov3","realesrgan-x4plus","realesrgan-x4plus-anime"]
 models = "realesr-animevideov3"
 client = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 @client.on(events.NewMessage(incoming=True))
@@ -24,20 +24,20 @@ async def my_event_handler(event):
                 if oldfilename.endswith(".webp"):
                     file_end = ".webp"
         if file_end != "":
-            os.system("realesrgan-ncnn-vulkan" + " -i" + " ./" + name + file_end + " -o" + " ./" + name + "_out" + file_end + " -n " + models)
-            await event.reply(force_document=True,file=("./" + name + "_out" + file_end))
-            os.remove("./" + name + file_end)
-            os.remove("./" + name + "_out" + file_end)
+            os.system("realesrgan-ncnn-vulkan" + " -i" + " .\\" + name + file_end + " -o" + " .\\" + name + "_out" + file_end + " -n " + models)
+            await event.reply(force_document=True,file=(".\\" + name + "_out" + file_end))
+            os.remove(".\\" + name + file_end)
+            os.remove(".\\" + name + "_out" + file_end)
         else:
             print("invalid incoming photo")
     else:
         if event.raw_text == "/clean_cache":
-            os.system("rm ./*.jpg")
-            os.system("rm ./*.png")
-            os.system("rm ./*.webp")
+            os.system("pwsh -Command rm .\*.jpg")
+            os.system("pwsh -Command rm .\*.png")
+            os.system("pwsh -Command rm .\*.webp")
             print("Cache cleaned")
         if event.raw_text == "/ava_model":
-            await event.reply("目前的模型是 " + models + " , 可用模型: realesr-animevideov3 | realesrgan-x4plus | realesrgan-x4plus-anime | realesrnet-x4plus")
+            await event.reply("目前的模型是 " + models + " , 可用模型: realesr-animevideov3 | realesrgan-x4plus | realesrgan-x4plus-anime ")
         if event.raw_text[:6] == "/model":
             if event.raw_text[7:] in model_list:
                 models = event.raw_text[7:]
