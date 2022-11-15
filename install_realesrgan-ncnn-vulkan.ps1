@@ -6,4 +6,6 @@ unzip realesrgan-ncnn-vulkan-v0.2.0-windows.zip
 mv .\realesrgan-ncnn-vulkan-v0.2.0-windows\realesrgan-ncnn-vulkan.exe .\realesrgan-ncnn-vulkan.exe
 mv .\realesrgan-ncnn-vulkan-v0.2.0-windows\vcomp140.dll .\vcomp140.dll
 mv .\realesrgan-ncnn-vulkan-v0.2.0-windows\vcomp140d.dll .\vcomp140d.dll
+rm .\realesrgan-ncnn-vulkan-v0.2.0-windows -r
+rm .\realesrgan-ncnn-vulkan-v0.2.0-windows.zip
 echo "Finished"
