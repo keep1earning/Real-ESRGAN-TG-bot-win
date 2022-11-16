@@ -35,7 +35,7 @@ jobs:
           C:\ProgramData\scoop\apps\python\current\python.exe -m pip install --upgrade pip
           pip3 install requests pyinstaller retrying
           pip3 install -r requirements.txt
-          pyinstaller -F ./TiktokDownload-Multi-GUI.py
+          pyinstaller -F ./main.py
           
       - uses: actions/upload-artifact@v3
         with:
